@@ -1,0 +1,5 @@
+base language definition SimplyTypedLambdaCalculus
+
+context-free syntax
+  "foo" -> X
+  "bar" -> Y

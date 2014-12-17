@@ -1,0 +1,9 @@
+base language definition SimplyTypedLambdaCalculus
+
+context-free syntax
+  "foo" -> X
+  "bar" -> Y
+
+variables
+  "x" [a-zA-Z0-9]* -> X
+  "y" [a-zA-Z]*    -> Y

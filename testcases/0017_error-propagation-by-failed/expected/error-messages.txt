@@ -1,0 +1,2 @@
+error: line 4 column 16 to line 4 column 26:
+  "Several cons attributes are not allowed"

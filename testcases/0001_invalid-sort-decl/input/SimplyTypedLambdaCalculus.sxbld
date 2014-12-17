@@ -1,0 +1,4 @@
+base language definition SimplyTypedLambdaCalculus
+
+sorts Foo Bar[[Quxx]] Baz
+

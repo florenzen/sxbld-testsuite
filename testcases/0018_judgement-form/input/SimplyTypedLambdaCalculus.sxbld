@@ -1,0 +1,8 @@
+base language definition SimplyTypedLambdaCalculus
+
+context-free syntax
+  "foo" Y -> X
+  "bar" X "bar" -> Y
+
+judgement forms
+  { X "+" Y "=" Z }

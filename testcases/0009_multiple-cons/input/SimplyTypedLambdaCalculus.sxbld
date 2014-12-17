@@ -1,0 +1,5 @@
+base language definition SimplyTypedLambdaCalculus
+
+context-free syntax
+  "foo" -> X {cons("Foo"), cons("Foo1")}
+  "bar" -> Y

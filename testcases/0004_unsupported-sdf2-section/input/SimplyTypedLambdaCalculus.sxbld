@@ -1,0 +1,4 @@
+base language definition SimplyTypedLambdaCalculus
+
+syntax
+  "x" -> X

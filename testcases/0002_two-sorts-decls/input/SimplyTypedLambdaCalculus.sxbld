@@ -1,0 +1,5 @@
+base language definition SimplyTypedLambdaCalculus
+
+sorts Foo Bar Bar
+
+sorts Quxx

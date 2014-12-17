@@ -1,0 +1,2 @@
+error: line 5 column 19 to line 5 column 19:
+  "Duplicate constructor name"

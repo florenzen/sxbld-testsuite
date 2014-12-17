@@ -1,0 +1,18 @@
+module SimplyTypedLambdaCalculus
+
+ imports org/sugarj/sxbld/initTrans
+
+
+strategies
+  SimplyTypedLambdaCalculus-sorts =
+    ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-arities =
+    ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-forms =
+    ![]

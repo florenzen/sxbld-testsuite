@@ -1,0 +1,7 @@
+base language definition SimplyTypedLambdaCalculus
+
+lexical syntax
+  "x" -> X
+
+context-free syntax
+  "x" -> X

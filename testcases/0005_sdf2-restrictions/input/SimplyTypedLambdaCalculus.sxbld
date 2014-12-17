@@ -1,0 +1,8 @@
+base language definition SimplyTypedLambdaCalculus
+
+lexical restrictions
+    ID  -/- [A-Za-z0-9]
+    NAT -/- [0-9]
+
+context-free restrictions
+    Def -/- [d] . [e] . [f]

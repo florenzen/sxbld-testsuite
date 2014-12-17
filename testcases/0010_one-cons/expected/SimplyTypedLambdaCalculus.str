@@ -1,0 +1,25 @@
+module SimplyTypedLambdaCalculus
+
+ imports org/sugarj/sxbld/initTrans
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusFoo    : SimplyTypedLambdaCalculusX()
+    SimplyTypedLambdaCalculusYCons0 : SimplyTypedLambdaCalculusY()
+
+
+strategies
+  SimplyTypedLambdaCalculus-sorts =
+    ![("Y", SXAbsSortContextFree())|[("X", SXAbsSortContextFree())]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-arities =
+    ![("YCons0", SXAbsArity([], "Y"))|[ ("Foo", SXAbsArity([], "X"))
+                                      ]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-forms =
+    ![]

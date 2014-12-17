@@ -1,0 +1,2 @@
+error: line 4 column 10 to line 4 column 11:
+  "Unsupported symbol"

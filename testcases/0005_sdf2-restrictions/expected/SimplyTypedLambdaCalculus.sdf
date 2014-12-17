@@ -1,0 +1,9 @@
+module SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initGrammar
+exports 
+  (/)
+lexical restrictions
+  SimplyTypedLambdaCalculusID -/- [A-Za-z0-9]
+  SimplyTypedLambdaCalculusNAT -/- [0-9] context-free restrictions
+                                           SimplyTypedLambdaCalculusDef
+                                           -/- [d] . [e] . [f]
