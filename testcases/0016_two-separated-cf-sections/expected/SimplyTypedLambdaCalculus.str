@@ -31,3 +31,8 @@ strategies
 strategies
   SimplyTypedLambdaCalculus-forms =
     ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
+    ![]

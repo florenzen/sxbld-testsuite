@@ -11,8 +11,8 @@ signature
 
 signature
   constructors
-    SimplyTypedLambdaCalculusMetaVarX : iter-star() -> SimplyTypedLambdaCalculusX()
-    SimplyTypedLambdaCalculusMetaVarY : iter-star() -> SimplyTypedLambdaCalculusY()
+    SimplyTypedLambdaCalculusMetaVarX : SimplyTypedLambdaCalculusMetaVarX() -> SimplyTypedLambdaCalculusX()
+    SimplyTypedLambdaCalculusMetaVarY : SimplyTypedLambdaCalculusMetaVarY() -> SimplyTypedLambdaCalculusY()
 
 
 strategies
@@ -28,4 +28,9 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-forms =
+    ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
     ![]

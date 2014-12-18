@@ -5,6 +5,11 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
+    SimplyTypedLambdaCalculusJudgement2 : SimplyTypedLambdaCalculusX() * SimplyTypedLambdaCalculusY() * SimplyTypedLambdaCalculusZ() -> SXJudgement()
+
+
+signature
+  constructors
     SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
     SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusX() -> SimplyTypedLambdaCalculusY()
 
@@ -26,9 +31,14 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-forms =
-    ![ ( "SimplyTypedLambdaCalculusJudgement2"
+    ![ ( "Judgement2"
        , SXAbsJudgementForm(
            ["X"|["Y"|["Z"]]]
          )
        )
      ]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
+    ![]

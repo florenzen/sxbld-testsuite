@@ -6,5 +6,8 @@ context-free syntax
   "foo" -> SimplyTypedLambdaCalculusX {cons("SimplyTypedLambdaCalculusXCons0")}
   "bar" -> SimplyTypedLambdaCalculusY {cons("SimplyTypedLambdaCalculusYCons1")}
 context-free syntax
-  "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusX {prefer, cons("SimplyTypedLambdaCalculusMetaVarX")}
-  "y" [a-zA-Z]*    -> SimplyTypedLambdaCalculusY {prefer, cons("SimplyTypedLambdaCalculusMetaVarY")}
+  SimplyTypedLambdaCalculusMetaVarX -> SimplyTypedLambdaCalculusX {prefer, cons("SimplyTypedLambdaCalculusMetaVarX")}
+  SimplyTypedLambdaCalculusMetaVarY -> SimplyTypedLambdaCalculusY {prefer, cons("SimplyTypedLambdaCalculusMetaVarY")}
+lexical syntax
+  "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusMetaVarX 
+  "y" [a-zA-Z]*    -> SimplyTypedLambdaCalculusMetaVarY 
