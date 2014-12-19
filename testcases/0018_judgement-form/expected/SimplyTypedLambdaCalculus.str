@@ -11,7 +11,9 @@ signature
 signature
   constructors
     SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
+    SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
     SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusX() -> SimplyTypedLambdaCalculusY()
+    SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusGndX() -> SimplyTypedLambdaCalculusGndY()
 
 
 strategies
