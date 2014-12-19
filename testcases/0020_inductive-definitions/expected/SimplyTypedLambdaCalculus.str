@@ -1,0 +1,73 @@
+module SimplyTypedLambdaCalculus
+
+ imports org/sugarj/sxbld/initTrans SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusMetaVarNum : SimplyTypedLambdaCalculusMetaVarNum() -> SimplyTypedLambdaCalculusNum()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusJudgement2 : SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() -> SXJudgement()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusNumCons0 : SimplyTypedLambdaCalculusNum()
+    SimplyTypedLambdaCalculusNumCons0 : SimplyTypedLambdaCalculusGndNum()
+    SimplyTypedLambdaCalculusNumCons1 : SimplyTypedLambdaCalculusNum() -> SimplyTypedLambdaCalculusNum()
+    SimplyTypedLambdaCalculusNumCons1 : SimplyTypedLambdaCalculusGndNum() -> SimplyTypedLambdaCalculusGndNum()
+
+
+strategies
+  SimplyTypedLambdaCalculus-sorts =
+    ![("Num", SXAbsSortContextFree())]
+
+
+strategies
+  SimplyTypedLambdaCalculus-arities =
+    ![( "NumCons1"
+      , SXAbsArity(["Num"], "Num")
+      )|[ ("NumCons0", SXAbsArity([], "Num"))
+        ]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-forms =
+    ![ ( "Judgement2"
+       , SXAbsJudgementForm(
+           ["Num"|["Num"|["Num"]]]
+         )
+       )
+     ]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
+    ![( "Succ"
+      , SXAbsInfRule(
+          [ SimplyTypedLambdaCalculusJudgement2(
+              SimplyTypedLambdaCalculusMetaVarNum("n1")
+            , SimplyTypedLambdaCalculusMetaVarNum("n2")
+            , SimplyTypedLambdaCalculusMetaVarNum("n3")
+            )
+          ]
+        , SimplyTypedLambdaCalculusJudgement2(
+            SimplyTypedLambdaCalculusNumCons1(SimplyTypedLambdaCalculusMetaVarNum("n1"))
+          , SimplyTypedLambdaCalculusMetaVarNum("n2")
+          , SimplyTypedLambdaCalculusNumCons1(SimplyTypedLambdaCalculusMetaVarNum("n3"))
+          )
+        )
+      )|[ ( "Zero"
+          , SXAbsInfRule(
+              []
+            , SimplyTypedLambdaCalculusJudgement2(
+                SimplyTypedLambdaCalculusNumCons0()
+              , SimplyTypedLambdaCalculusMetaVarNum("n")
+              , SimplyTypedLambdaCalculusMetaVarNum("n")
+              )
+            )
+          )
+        ]]

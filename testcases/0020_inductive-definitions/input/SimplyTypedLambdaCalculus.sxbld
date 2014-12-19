@@ -1,0 +1,20 @@
+base language definition SimplyTypedLambdaCalculus
+
+context-free syntax
+   "0"                -> Num
+   "succ" "(" Num ")" -> Num
+
+judgement forms
+  { Num "+" Num "=" Num }
+
+variables
+  "n" [0-9]* -> Num
+
+inductive definitions
+  Zero:
+    ---------
+    0 + n = n
+  Succ:
+    n1 + n2 = n3
+    ------------------------
+    succ(n1) + n2 = succ(n3)
