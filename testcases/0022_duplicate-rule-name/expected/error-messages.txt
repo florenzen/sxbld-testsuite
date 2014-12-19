@@ -1,0 +1,2 @@
+error: line 75 column 1 to line 75 column 1:
+  "Duplicate inference rule name"

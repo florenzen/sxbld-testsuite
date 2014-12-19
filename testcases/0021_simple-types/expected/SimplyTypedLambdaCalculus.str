@@ -1,0 +1,186 @@
+module SimplyTypedLambdaCalculus
+
+ imports org/sugarj/sxbld/initTrans SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusJudgement11 : SimplyTypedLambdaCalculusEnv() * SimplyTypedLambdaCalculusTerm() * SimplyTypedLambdaCalculusType() -> SXJudgement()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusTermCons0 : SimplyTypedLambdaCalculusID() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusTermCons0 : SimplyTypedLambdaCalculusGndID() -> SimplyTypedLambdaCalculusGndTerm()
+    SimplyTypedLambdaCalculusTermCons1 : SimplyTypedLambdaCalculusID() * SimplyTypedLambdaCalculusType() * SimplyTypedLambdaCalculusTerm() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusTermCons1 : SimplyTypedLambdaCalculusGndID() * SimplyTypedLambdaCalculusGndType() * SimplyTypedLambdaCalculusGndTerm() -> SimplyTypedLambdaCalculusGndTerm()
+    SimplyTypedLambdaCalculusTermCons2 : SimplyTypedLambdaCalculusTerm() * SimplyTypedLambdaCalculusTerm() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusTermCons2 : SimplyTypedLambdaCalculusGndTerm() * SimplyTypedLambdaCalculusGndTerm() -> SimplyTypedLambdaCalculusGndTerm()
+    SimplyTypedLambdaCalculusTermCons3 : SimplyTypedLambdaCalculusNAT() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusTermCons3 : SimplyTypedLambdaCalculusGndNAT() -> SimplyTypedLambdaCalculusGndTerm()
+    SimplyTypedLambdaCalculusTermCons4 : SimplyTypedLambdaCalculusTerm() * SimplyTypedLambdaCalculusTerm() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusTermCons4 : SimplyTypedLambdaCalculusGndTerm() * SimplyTypedLambdaCalculusGndTerm() -> SimplyTypedLambdaCalculusGndTerm()
+    SimplyTypedLambdaCalculusTermCons5 : SimplyTypedLambdaCalculusTerm() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusTermCons5 : SimplyTypedLambdaCalculusGndTerm() -> SimplyTypedLambdaCalculusGndTerm()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusTypeCons6 : SimplyTypedLambdaCalculusType()
+    SimplyTypedLambdaCalculusTypeCons6 : SimplyTypedLambdaCalculusGndType()
+    SimplyTypedLambdaCalculusTypeCons7 : SimplyTypedLambdaCalculusType() * SimplyTypedLambdaCalculusType() -> SimplyTypedLambdaCalculusType()
+    SimplyTypedLambdaCalculusTypeCons7 : SimplyTypedLambdaCalculusGndType() * SimplyTypedLambdaCalculusGndType() -> SimplyTypedLambdaCalculusGndType()
+    SimplyTypedLambdaCalculusTypeCons8 : SimplyTypedLambdaCalculusType() -> SimplyTypedLambdaCalculusType()
+    SimplyTypedLambdaCalculusTypeCons8 : SimplyTypedLambdaCalculusGndType() -> SimplyTypedLambdaCalculusGndType()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusMetaVarID   : SimplyTypedLambdaCalculusMetaVarID() -> SimplyTypedLambdaCalculusID()
+    SimplyTypedLambdaCalculusMetaVarNAT  : SimplyTypedLambdaCalculusMetaVarNAT() -> SimplyTypedLambdaCalculusNAT()
+    SimplyTypedLambdaCalculusMetaVarTerm : SimplyTypedLambdaCalculusMetaVarTerm() -> SimplyTypedLambdaCalculusTerm()
+    SimplyTypedLambdaCalculusMetaVarType : SimplyTypedLambdaCalculusMetaVarType() -> SimplyTypedLambdaCalculusType()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusEnvCons9  : SimplyTypedLambdaCalculusEnv()
+    SimplyTypedLambdaCalculusEnvCons9  : SimplyTypedLambdaCalculusGndEnv()
+    SimplyTypedLambdaCalculusEnvCons10 : SimplyTypedLambdaCalculusEnv() * SimplyTypedLambdaCalculusID() * SimplyTypedLambdaCalculusType() -> SimplyTypedLambdaCalculusEnv()
+    SimplyTypedLambdaCalculusEnvCons10 : SimplyTypedLambdaCalculusGndEnv() * SimplyTypedLambdaCalculusGndID() * SimplyTypedLambdaCalculusGndType() -> SimplyTypedLambdaCalculusGndEnv()
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusMetaVarEnv : SimplyTypedLambdaCalculusMetaVarEnv() -> SimplyTypedLambdaCalculusEnv()
+
+
+strategies
+  SimplyTypedLambdaCalculus-sorts =
+    ![("MVEnv", SXAbsSortLexical())|[("Env", SXAbsSortContextFree())|[("MVType", SXAbsSortLexical())|[("MVTerm", SXAbsSortLexical())|[("MVNAT", SXAbsSortLexical())|[("MVID", SXAbsSortLexical())|[("Type", SXAbsSortContextFree())|[("Term", SXAbsSortContextFree())|[("PrimitiveType", SXAbsSortLexical())|[("ID", SXAbsSortLexical())|[("NAT", SXAbsSortLexical())]]]]]]]]]]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-arities =
+    ![( "EnvCons10"
+      , SXAbsArity(
+          ["Env"|["ID"|["Type"]]]
+        , "Env"
+        )
+      )|[("EnvCons9", SXAbsArity([], "Env"))|[( "TypeCons8"
+                                              , SXAbsArity(["Type"], "Type")
+                                              )|[( "TypeCons7"
+                                                 , SXAbsArity(
+                                                     ["Type"|["Type"]]
+                                                   , "Type"
+                                                   )
+                                                 )|[("TypeCons6", SXAbsArity([], "Type"))|[( "TermCons5"
+                                                                                           , SXAbsArity(["Term"], "Term")
+                                                                                           )|[( "TermCons4"
+                                                                                              , SXAbsArity(
+                                                                                                  ["Term"|["Term"]]
+                                                                                                , "Term"
+                                                                                                )
+                                                                                              )|[( "TermCons3"
+                                                                                                 , SXAbsArity(["NAT"], "Term")
+                                                                                                 )|[( "TermCons2"
+                                                                                                    , SXAbsArity(
+                                                                                                        ["Term"|["Term"]]
+                                                                                                      , "Term"
+                                                                                                      )
+                                                                                                    )|[( "TermCons1"
+                                                                                                       , SXAbsArity(
+                                                                                                           ["ID"|["Type"|["Term"]]]
+                                                                                                         , "Term"
+                                                                                                         )
+                                                                                                       )|[ ( "TermCons0"
+                                                                                                           , SXAbsArity(["ID"], "Term")
+                                                                                                           )
+                                                                                                         ]]]]]]]]]]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-forms =
+    ![ ( "Judgement11"
+       , SXAbsJudgementForm(
+           ["Env"|["Term"|["Type"]]]
+         )
+       )
+     ]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
+    ![( "App"
+      , SXAbsInfRule(
+          [SimplyTypedLambdaCalculusJudgement11(
+             SimplyTypedLambdaCalculusMetaVarEnv("C")
+           , SimplyTypedLambdaCalculusMetaVarTerm("t1")
+           , SimplyTypedLambdaCalculusTypeCons7(
+               SimplyTypedLambdaCalculusMetaVarType("T1")
+             , SimplyTypedLambdaCalculusMetaVarType("T2")
+             )
+           )|[ SimplyTypedLambdaCalculusJudgement11(
+                 SimplyTypedLambdaCalculusMetaVarEnv("C")
+               , SimplyTypedLambdaCalculusMetaVarTerm("t2")
+               , SimplyTypedLambdaCalculusMetaVarType("T1")
+               )
+             ]]
+        , SimplyTypedLambdaCalculusJudgement11(
+            SimplyTypedLambdaCalculusMetaVarEnv("C")
+          , SimplyTypedLambdaCalculusTermCons2(
+              SimplyTypedLambdaCalculusMetaVarTerm("t1")
+            , SimplyTypedLambdaCalculusMetaVarTerm("t2")
+            )
+          , SimplyTypedLambdaCalculusMetaVarType("T2")
+          )
+        )
+      )|[( "Abs"
+         , SXAbsInfRule(
+             [ SimplyTypedLambdaCalculusJudgement11(
+                 SimplyTypedLambdaCalculusEnvCons10(
+                   SimplyTypedLambdaCalculusMetaVarEnv("C")
+                 , SimplyTypedLambdaCalculusMetaVarID("x")
+                 , SimplyTypedLambdaCalculusMetaVarType("T")
+                 )
+               , SimplyTypedLambdaCalculusMetaVarTerm("t")
+               , SimplyTypedLambdaCalculusMetaVarType("T2")
+               )
+             ]
+           , SimplyTypedLambdaCalculusJudgement11(
+               SimplyTypedLambdaCalculusMetaVarEnv("C")
+             , SimplyTypedLambdaCalculusTermCons1(
+                 SimplyTypedLambdaCalculusMetaVarID("x")
+               , SimplyTypedLambdaCalculusMetaVarType("T1")
+               , SimplyTypedLambdaCalculusMetaVarTerm("t")
+               )
+             , SimplyTypedLambdaCalculusTypeCons7(
+                 SimplyTypedLambdaCalculusMetaVarType("T1")
+               , SimplyTypedLambdaCalculusMetaVarType("T2")
+               )
+             )
+           )
+         )|[( "Nat"
+            , SXAbsInfRule(
+                []
+              , SimplyTypedLambdaCalculusJudgement11(
+                  SimplyTypedLambdaCalculusMetaVarEnv("C")
+                , SimplyTypedLambdaCalculusTermCons3(SimplyTypedLambdaCalculusMetaVarNAT("n"))
+                , SimplyTypedLambdaCalculusTypeCons6()
+                )
+              )
+            )|[ ( "Var"
+                , SXAbsInfRule(
+                    []
+                  , SimplyTypedLambdaCalculusJudgement11(
+                      SimplyTypedLambdaCalculusEnvCons10(
+                        SimplyTypedLambdaCalculusMetaVarEnv("C")
+                      , SimplyTypedLambdaCalculusMetaVarID("x")
+                      , SimplyTypedLambdaCalculusMetaVarType("T")
+                      )
+                    , SimplyTypedLambdaCalculusTermCons0(SimplyTypedLambdaCalculusMetaVarID("x"))
+                    , SimplyTypedLambdaCalculusMetaVarType("T")
+                    )
+                  )
+                )
+              ]]]]
