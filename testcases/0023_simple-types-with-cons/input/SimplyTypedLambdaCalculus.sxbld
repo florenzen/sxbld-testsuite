@@ -1,0 +1,79 @@
+base language definition SimplyTypedLambdaCalculus
+
+base file extension st
+extensible file extension xst
+
+lexical syntax
+  [0-9][0-9]*          -> NAT
+  [a-zA-Z][a-zA-Z0-9]* -> ID
+
+lexical restrictions
+  NAT -/- [0-9]
+  ID  -/- [a-zA-Z0-9]
+
+lexical syntax
+  "Nat"         -> PrimitiveType
+  PrimitiveType -> ID {reject}
+
+context-free syntax 
+  ID                        -> Term {cons("Var")}
+  "\\" ID ":" Type "." Term -> Term {cons("Abs")}
+  Term Term                 -> Term {cons("App"), left}
+  NAT                       -> Term {cons("Nat")}
+  Term "+" Term             -> Term {cons("Add"), left}
+  "(" Term ")"              -> Term {brackets}
+
+context-free syntax
+  "Nat"          -> Type
+  Type "->" Type -> Type {right}
+  "(" Type ")"   -> Type {brackets} 
+
+lexical syntax
+  "x" [a-zA-Z0-9]* -> MVID
+  "y" [a-zA-Z0-9]* -> MVID
+  "n" [a-zA-Z0-9]* -> MVNAT
+  "t" [a-zA-Z0-9]* -> MVTerm
+  "S" [a-zA-Z0-9]* -> MVType
+  "T" [a-zA-Z0-9]* -> MVType
+
+lexical restrictions
+  MVID MVNAT MVTerm MVType -/- [a-zA-Z0-9]
+
+variables
+  MVID   -> ID
+  MVNAT  -> NAT
+  MVTerm -> Term
+  MVType -> Type
+
+context-free syntax
+  "{}"                -> Env 
+  Env "," ID ":" Type -> Env
+
+lexical syntax
+  "C" [a-zA-Z0-9]* -> MVEnv
+
+lexical restrictions
+  MVEnv -/- [a-zA-Z0-9]
+
+variables
+  MVEnv -> Env
+  
+judgement forms 
+  { Env "|-" Term ":" Type } 
+
+inductive definitions
+  Var:
+    --------------
+    C,x:T |- x : T
+  Nat:
+    ------------
+    C |- n : Nat
+ App:
+   C,x:T |- t : T2
+   ------------------------
+   C |- \x:T1. t : T1 -> T2
+ Abs:
+   (C |- t1 : T1 -> T2) (C |- t2 : T1)
+   -----------------------------------
+   C |- t1 t2 : T2
+ 
