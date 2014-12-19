@@ -2,9 +2,8 @@ module SimplyTypedLambdaCalculus
  imports org/sugarj/sxbld/initGrammar
 exports 
   (/)
-
 context-free syntax
   "foo" -> SimplyTypedLambdaCalculusX    {cons("SimplyTypedLambdaCalculusFoo")}
   "foo" -> SimplyTypedLambdaCalculusGndX {cons("SimplyTypedLambdaCalculusFoo")}
-  "bar" -> SimplyTypedLambdaCalculusY    {cons("SimplyTypedLambdaCalculusYCons0")}
-  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SimplyTypedLambdaCalculusYCons0")}
+  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXConsY0")}
+  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXConsY0")}

@@ -2,15 +2,14 @@ module SimplyTypedLambdaCalculus
  imports org/sugarj/sxbld/initGrammar
 exports 
   (/)
-
 context-free syntax
-  "foo" -> SimplyTypedLambdaCalculusX    {cons("SimplyTypedLambdaCalculusXCons0")}
-  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SimplyTypedLambdaCalculusXCons0")}
-  "bar" -> SimplyTypedLambdaCalculusY    {cons("SimplyTypedLambdaCalculusYCons1")}
-  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SimplyTypedLambdaCalculusYCons1")}
+  "foo" -> SimplyTypedLambdaCalculusX    {cons("SXConsX0")}
+  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SXConsX0")}
+  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXConsY1")}
+  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXConsY1")}
 context-free syntax
-  SimplyTypedLambdaCalculusMetaVarX -> SimplyTypedLambdaCalculusX {prefer, cons("SimplyTypedLambdaCalculusMetaVarX")}
-  SimplyTypedLambdaCalculusMetaVarY -> SimplyTypedLambdaCalculusY {prefer, cons("SimplyTypedLambdaCalculusMetaVarY")}
+  SXMetaVarX -> SimplyTypedLambdaCalculusX {prefer, cons("SXMetaVarX")}
+  SXMetaVarY -> SimplyTypedLambdaCalculusY {prefer, cons("SXMetaVarY")}
 lexical syntax
-  "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusMetaVarX 
-  "y" [a-zA-Z]*    -> SimplyTypedLambdaCalculusMetaVarY 
+  "x" [a-zA-Z0-9]* -> SXMetaVarX 
+  "y" [a-zA-Z]*    -> SXMetaVarY 

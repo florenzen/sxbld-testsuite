@@ -16,7 +16,7 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-arities =
-    ![ ( "FOO"
+    ![ ( "SimplyTypedLambdaCalculusFOO"
        , SXAbsArity(["Y"], "X")
        )
      ]

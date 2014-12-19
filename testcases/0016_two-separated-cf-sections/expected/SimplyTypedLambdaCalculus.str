@@ -5,8 +5,8 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
-    SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
-    SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
+    SXConsX0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
+    SXConsX0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
 
 
 signature
@@ -22,9 +22,9 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-arities =
-    ![( "XCons0"
+    ![( "SXConsX0"
       , SXAbsArity(["Y"], "X")
-      )|[ ( "FOO"
+      )|[ ( "SimplyTypedLambdaCalculusFOO"
           , SXAbsArity(["Y"], "X")
           )
         ]]

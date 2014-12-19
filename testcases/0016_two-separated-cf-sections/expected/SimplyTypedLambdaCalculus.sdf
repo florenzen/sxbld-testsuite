@@ -4,8 +4,8 @@ exports
   (/)
 
 context-free syntax
-  "quxx" SimplyTypedLambdaCalculusY    -> SimplyTypedLambdaCalculusX    {cons("SimplyTypedLambdaCalculusXCons0")}
-  "quxx" SimplyTypedLambdaCalculusGndY -> SimplyTypedLambdaCalculusGndX {cons("SimplyTypedLambdaCalculusXCons0")}
+  "quxx" SimplyTypedLambdaCalculusY    -> SimplyTypedLambdaCalculusX    {cons("SXConsX0")}
+  "quxx" SimplyTypedLambdaCalculusGndY -> SimplyTypedLambdaCalculusGndX {cons("SXConsX0")}
 context-free syntax
   "foo" SimplyTypedLambdaCalculusY          -> SimplyTypedLambdaCalculusX    {cons("SimplyTypedLambdaCalculusFOO")}
   "foo" SimplyTypedLambdaCalculusGndY       -> SimplyTypedLambdaCalculusGndX {cons("SimplyTypedLambdaCalculusFOO")}

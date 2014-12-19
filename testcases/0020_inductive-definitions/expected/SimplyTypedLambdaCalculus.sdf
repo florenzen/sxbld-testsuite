@@ -2,15 +2,14 @@ module SimplyTypedLambdaCalculus
  imports org/sugarj/sxbld/initGrammar SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
 exports 
   (/)
-
 context-free syntax
-  SimplyTypedLambdaCalculusMetaVarNum -> SimplyTypedLambdaCalculusNum {prefer, cons("SimplyTypedLambdaCalculusMetaVarNum")}
+  SXMetaVarNum -> SimplyTypedLambdaCalculusNum {prefer, cons("SXMetaVarNum")}
 lexical syntax
-  "n" [0-9]* -> SimplyTypedLambdaCalculusMetaVarNum 
+  "n" [0-9]* -> SXMetaVarNum 
 context-free syntax
-  SimplyTypedLambdaCalculusNum "+" SimplyTypedLambdaCalculusNum "=" SimplyTypedLambdaCalculusNum -> SXJudgement {cons("SimplyTypedLambdaCalculusJudgement2")}
+  SimplyTypedLambdaCalculusNum "+" SimplyTypedLambdaCalculusNum "=" SimplyTypedLambdaCalculusNum -> SXJudgement {cons("SXJudgement2")}
 context-free syntax
-  "0"                                            -> SimplyTypedLambdaCalculusNum    {cons("SimplyTypedLambdaCalculusNumCons0")}
-  "0"                                            -> SimplyTypedLambdaCalculusGndNum {cons("SimplyTypedLambdaCalculusNumCons0")}
-  "succ" "(" SimplyTypedLambdaCalculusNum ")"    -> SimplyTypedLambdaCalculusNum    {cons("SimplyTypedLambdaCalculusNumCons1")}
-  "succ" "(" SimplyTypedLambdaCalculusGndNum ")" -> SimplyTypedLambdaCalculusGndNum {cons("SimplyTypedLambdaCalculusNumCons1")}
+  "0"                                            -> SimplyTypedLambdaCalculusNum    {cons("SXConsNum0")}
+  "0"                                            -> SimplyTypedLambdaCalculusGndNum {cons("SXConsNum0")}
+  "succ" "(" SimplyTypedLambdaCalculusNum ")"    -> SimplyTypedLambdaCalculusNum    {cons("SXConsNum1")}
+  "succ" "(" SimplyTypedLambdaCalculusGndNum ")" -> SimplyTypedLambdaCalculusGndNum {cons("SXConsNum1")}

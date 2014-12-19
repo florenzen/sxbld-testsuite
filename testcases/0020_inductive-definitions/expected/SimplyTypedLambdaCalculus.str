@@ -5,20 +5,20 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
-    SimplyTypedLambdaCalculusMetaVarNum : SimplyTypedLambdaCalculusMetaVarNum() -> SimplyTypedLambdaCalculusNum()
+    SXMetaVarNum : SXMetaVarNum() -> SimplyTypedLambdaCalculusNum()
 
 
 signature
   constructors
-    SimplyTypedLambdaCalculusJudgement2 : SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() -> SXJudgement()
+    SXJudgement2 : SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() -> SXJudgement()
 
 
 signature
   constructors
-    SimplyTypedLambdaCalculusNumCons0 : SimplyTypedLambdaCalculusNum()
-    SimplyTypedLambdaCalculusNumCons0 : SimplyTypedLambdaCalculusGndNum()
-    SimplyTypedLambdaCalculusNumCons1 : SimplyTypedLambdaCalculusNum() -> SimplyTypedLambdaCalculusNum()
-    SimplyTypedLambdaCalculusNumCons1 : SimplyTypedLambdaCalculusGndNum() -> SimplyTypedLambdaCalculusGndNum()
+    SXConsNum0 : SimplyTypedLambdaCalculusNum()
+    SXConsNum0 : SimplyTypedLambdaCalculusGndNum()
+    SXConsNum1 : SimplyTypedLambdaCalculusNum() -> SimplyTypedLambdaCalculusNum()
+    SXConsNum1 : SimplyTypedLambdaCalculusGndNum() -> SimplyTypedLambdaCalculusGndNum()
 
 
 strategies
@@ -28,15 +28,15 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-arities =
-    ![( "NumCons1"
+    ![( "SXConsNum1"
       , SXAbsArity(["Num"], "Num")
-      )|[ ("NumCons0", SXAbsArity([], "Num"))
+      )|[ ("SXConsNum0", SXAbsArity([], "Num"))
         ]]
 
 
 strategies
   SimplyTypedLambdaCalculus-forms =
-    ![ ( "Judgement2"
+    ![ ( "SXJudgement2"
        , SXAbsJudgementForm(
            ["Num"|["Num"|["Num"]]]
          )
@@ -48,25 +48,20 @@ strategies
   SimplyTypedLambdaCalculus-inference-rules =
     ![( "Succ"
       , SXAbsInfRule(
-          [ SimplyTypedLambdaCalculusJudgement2(
-              SimplyTypedLambdaCalculusMetaVarNum("n1")
-            , SimplyTypedLambdaCalculusMetaVarNum("n2")
-            , SimplyTypedLambdaCalculusMetaVarNum("n3")
-            )
-          ]
-        , SimplyTypedLambdaCalculusJudgement2(
-            SimplyTypedLambdaCalculusNumCons1(SimplyTypedLambdaCalculusMetaVarNum("n1"))
-          , SimplyTypedLambdaCalculusMetaVarNum("n2")
-          , SimplyTypedLambdaCalculusNumCons1(SimplyTypedLambdaCalculusMetaVarNum("n3"))
+          []
+        , SXJudgement2(
+            SXConsNum1(SXMetaVarNum("n1"))
+          , SXMetaVarNum("n2")
+          , SXConsNum1(SXMetaVarNum("n3"))
           )
         )
       )|[ ( "Zero"
           , SXAbsInfRule(
               []
-            , SimplyTypedLambdaCalculusJudgement2(
-                SimplyTypedLambdaCalculusNumCons0()
-              , SimplyTypedLambdaCalculusMetaVarNum("n")
-              , SimplyTypedLambdaCalculusMetaVarNum("n")
+            , SXJudgement2(
+                SXConsNum0()
+              , SXMetaVarNum("n")
+              , SXMetaVarNum("n")
               )
             )
           )

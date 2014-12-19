@@ -4,7 +4,7 @@ exports
   (/)
 
 context-free syntax
-  SimplyTypedLambdaCalculusEnv "|-" SimplyTypedLambdaCalculusTerm ":" SimplyTypedLambdaCalculusType -> SXJudgement {cons("SimplyTypedLambdaCalculusJudgement11")}
+  SimplyTypedLambdaCalculusEnv "|-" SimplyTypedLambdaCalculusTerm ":" SimplyTypedLambdaCalculusType -> SXJudgement {cons("SXJudgement11")}
 lexical syntax
   [0-9] [0-9]*          -> SimplyTypedLambdaCalculusNAT    
   [0-9] [0-9]*          -> SimplyTypedLambdaCalculusGndNAT 
@@ -24,25 +24,25 @@ lexical syntax
   SimplyTypedLambdaCalculusPrimitiveType    -> SimplyTypedLambdaCalculusID               {reject}
   SimplyTypedLambdaCalculusGndPrimitiveType -> SimplyTypedLambdaCalculusGndID            {reject}
 context-free syntax
-  SimplyTypedLambdaCalculusID                                                                                   -> SimplyTypedLambdaCalculusTerm    {cons("SimplyTypedLambdaCalculusTermCons0")}
-  SimplyTypedLambdaCalculusGndID                                                                                -> SimplyTypedLambdaCalculusGndTerm {cons("SimplyTypedLambdaCalculusTermCons0")}
-  "\\" SimplyTypedLambdaCalculusID ":" SimplyTypedLambdaCalculusType "." SimplyTypedLambdaCalculusTerm          -> SimplyTypedLambdaCalculusTerm    {cons("SimplyTypedLambdaCalculusTermCons1")}
-  "\\" SimplyTypedLambdaCalculusGndID ":" SimplyTypedLambdaCalculusGndType "." SimplyTypedLambdaCalculusGndTerm -> SimplyTypedLambdaCalculusGndTerm {cons("SimplyTypedLambdaCalculusTermCons1")}
-  SimplyTypedLambdaCalculusTerm SimplyTypedLambdaCalculusTerm                                                   -> SimplyTypedLambdaCalculusTerm    {cons("SimplyTypedLambdaCalculusTermCons2"), left}
-  SimplyTypedLambdaCalculusGndTerm SimplyTypedLambdaCalculusGndTerm                                             -> SimplyTypedLambdaCalculusGndTerm {cons("SimplyTypedLambdaCalculusTermCons2"), left}
-  SimplyTypedLambdaCalculusNAT                                                                                  -> SimplyTypedLambdaCalculusTerm    {cons("SimplyTypedLambdaCalculusTermCons3")}
-  SimplyTypedLambdaCalculusGndNAT                                                                               -> SimplyTypedLambdaCalculusGndTerm {cons("SimplyTypedLambdaCalculusTermCons3")}
-  SimplyTypedLambdaCalculusTerm "+" SimplyTypedLambdaCalculusTerm                                               -> SimplyTypedLambdaCalculusTerm    {cons("SimplyTypedLambdaCalculusTermCons4"), left}
-  SimplyTypedLambdaCalculusGndTerm "+" SimplyTypedLambdaCalculusGndTerm                                         -> SimplyTypedLambdaCalculusGndTerm {cons("SimplyTypedLambdaCalculusTermCons4"), left}
-  "(" SimplyTypedLambdaCalculusTerm ")"                                                                         -> SimplyTypedLambdaCalculusTerm    {cons("SimplyTypedLambdaCalculusTermCons5"), brackets}
-  "(" SimplyTypedLambdaCalculusGndTerm ")"                                                                      -> SimplyTypedLambdaCalculusGndTerm {cons("SimplyTypedLambdaCalculusTermCons5"), brackets}
+  SimplyTypedLambdaCalculusID                                                                                   -> SimplyTypedLambdaCalculusTerm    {cons("SXConsTerm0")}
+  SimplyTypedLambdaCalculusGndID                                                                                -> SimplyTypedLambdaCalculusGndTerm {cons("SXConsTerm0")}
+  "\\" SimplyTypedLambdaCalculusID ":" SimplyTypedLambdaCalculusType "." SimplyTypedLambdaCalculusTerm          -> SimplyTypedLambdaCalculusTerm    {cons("SXConsTerm1")}
+  "\\" SimplyTypedLambdaCalculusGndID ":" SimplyTypedLambdaCalculusGndType "." SimplyTypedLambdaCalculusGndTerm -> SimplyTypedLambdaCalculusGndTerm {cons("SXConsTerm1")}
+  SimplyTypedLambdaCalculusTerm SimplyTypedLambdaCalculusTerm                                                   -> SimplyTypedLambdaCalculusTerm    {cons("SXConsTerm2"), left}
+  SimplyTypedLambdaCalculusGndTerm SimplyTypedLambdaCalculusGndTerm                                             -> SimplyTypedLambdaCalculusGndTerm {cons("SXConsTerm2"), left}
+  SimplyTypedLambdaCalculusNAT                                                                                  -> SimplyTypedLambdaCalculusTerm    {cons("SXConsTerm3")}
+  SimplyTypedLambdaCalculusGndNAT                                                                               -> SimplyTypedLambdaCalculusGndTerm {cons("SXConsTerm3")}
+  SimplyTypedLambdaCalculusTerm "+" SimplyTypedLambdaCalculusTerm                                               -> SimplyTypedLambdaCalculusTerm    {cons("SXConsTerm4"), left}
+  SimplyTypedLambdaCalculusGndTerm "+" SimplyTypedLambdaCalculusGndTerm                                         -> SimplyTypedLambdaCalculusGndTerm {cons("SXConsTerm4"), left}
+  "(" SimplyTypedLambdaCalculusTerm ")"                                                                         -> SimplyTypedLambdaCalculusTerm    {cons("SXConsTerm5"), brackets}
+  "(" SimplyTypedLambdaCalculusGndTerm ")"                                                                      -> SimplyTypedLambdaCalculusGndTerm {cons("SXConsTerm5"), brackets}
 context-free syntax
-  "Nat"                                                                  -> SimplyTypedLambdaCalculusType    {cons("SimplyTypedLambdaCalculusTypeCons6")}
-  "Nat"                                                                  -> SimplyTypedLambdaCalculusGndType {cons("SimplyTypedLambdaCalculusTypeCons6")}
-  SimplyTypedLambdaCalculusType "->" SimplyTypedLambdaCalculusType       -> SimplyTypedLambdaCalculusType    {cons("SimplyTypedLambdaCalculusTypeCons7"), right}
-  SimplyTypedLambdaCalculusGndType "->" SimplyTypedLambdaCalculusGndType -> SimplyTypedLambdaCalculusGndType {cons("SimplyTypedLambdaCalculusTypeCons7"), right}
-  "(" SimplyTypedLambdaCalculusType ")"                                  -> SimplyTypedLambdaCalculusType    {cons("SimplyTypedLambdaCalculusTypeCons8"), brackets}
-  "(" SimplyTypedLambdaCalculusGndType ")"                               -> SimplyTypedLambdaCalculusGndType {cons("SimplyTypedLambdaCalculusTypeCons8"), brackets}
+  "Nat"                                                                  -> SimplyTypedLambdaCalculusType    {cons("SXConsType6")}
+  "Nat"                                                                  -> SimplyTypedLambdaCalculusGndType {cons("SXConsType6")}
+  SimplyTypedLambdaCalculusType "->" SimplyTypedLambdaCalculusType       -> SimplyTypedLambdaCalculusType    {cons("SXConsType7"), right}
+  SimplyTypedLambdaCalculusGndType "->" SimplyTypedLambdaCalculusGndType -> SimplyTypedLambdaCalculusGndType {cons("SXConsType7"), right}
+  "(" SimplyTypedLambdaCalculusType ")"                                  -> SimplyTypedLambdaCalculusType    {cons("SXConsType8"), brackets}
+  "(" SimplyTypedLambdaCalculusGndType ")"                               -> SimplyTypedLambdaCalculusGndType {cons("SXConsType8"), brackets}
 lexical syntax
   "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusMVID      
   "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusGndMVID   
@@ -64,20 +64,20 @@ lexical syntax
                                                             SimplyTypedLambdaCalculusMVType
                                                             -/- [a-zA-Z0-9]
 context-free syntax
-  SimplyTypedLambdaCalculusMetaVarID   -> SimplyTypedLambdaCalculusID   {prefer, cons("SimplyTypedLambdaCalculusMetaVarID")}
-  SimplyTypedLambdaCalculusMetaVarNAT  -> SimplyTypedLambdaCalculusNAT  {prefer, cons("SimplyTypedLambdaCalculusMetaVarNAT")}
-  SimplyTypedLambdaCalculusMetaVarTerm -> SimplyTypedLambdaCalculusTerm {prefer, cons("SimplyTypedLambdaCalculusMetaVarTerm")}
-  SimplyTypedLambdaCalculusMetaVarType -> SimplyTypedLambdaCalculusType {prefer, cons("SimplyTypedLambdaCalculusMetaVarType")}
+  SXMetaVarID   -> SimplyTypedLambdaCalculusID   {prefer, cons("SXMetaVarID")}
+  SXMetaVarNAT  -> SimplyTypedLambdaCalculusNAT  {prefer, cons("SXMetaVarNAT")}
+  SXMetaVarTerm -> SimplyTypedLambdaCalculusTerm {prefer, cons("SXMetaVarTerm")}
+  SXMetaVarType -> SimplyTypedLambdaCalculusType {prefer, cons("SXMetaVarType")}
 lexical syntax
-  SimplyTypedLambdaCalculusMVID   -> SimplyTypedLambdaCalculusMetaVarID   
-  SimplyTypedLambdaCalculusMVNAT  -> SimplyTypedLambdaCalculusMetaVarNAT  
-  SimplyTypedLambdaCalculusMVTerm -> SimplyTypedLambdaCalculusMetaVarTerm 
-  SimplyTypedLambdaCalculusMVType -> SimplyTypedLambdaCalculusMetaVarType 
+  SimplyTypedLambdaCalculusMVID   -> SXMetaVarID   
+  SimplyTypedLambdaCalculusMVNAT  -> SXMetaVarNAT  
+  SimplyTypedLambdaCalculusMVTerm -> SXMetaVarTerm 
+  SimplyTypedLambdaCalculusMVType -> SXMetaVarType 
 context-free syntax
-  "{}"                                                                                                    -> SimplyTypedLambdaCalculusEnv    {cons("SimplyTypedLambdaCalculusEnvCons9")}
-  "{}"                                                                                                    -> SimplyTypedLambdaCalculusGndEnv {cons("SimplyTypedLambdaCalculusEnvCons9")}
-  SimplyTypedLambdaCalculusEnv "," SimplyTypedLambdaCalculusID ":" SimplyTypedLambdaCalculusType          -> SimplyTypedLambdaCalculusEnv    {cons("SimplyTypedLambdaCalculusEnvCons10")}
-  SimplyTypedLambdaCalculusGndEnv "," SimplyTypedLambdaCalculusGndID ":" SimplyTypedLambdaCalculusGndType -> SimplyTypedLambdaCalculusGndEnv {cons("SimplyTypedLambdaCalculusEnvCons10")}
+  "{}"                                                                                                    -> SimplyTypedLambdaCalculusEnv    {cons("SXConsEnv9")}
+  "{}"                                                                                                    -> SimplyTypedLambdaCalculusGndEnv {cons("SXConsEnv9")}
+  SimplyTypedLambdaCalculusEnv "," SimplyTypedLambdaCalculusID ":" SimplyTypedLambdaCalculusType          -> SimplyTypedLambdaCalculusEnv    {cons("SXConsEnv10")}
+  SimplyTypedLambdaCalculusGndEnv "," SimplyTypedLambdaCalculusGndID ":" SimplyTypedLambdaCalculusGndType -> SimplyTypedLambdaCalculusGndEnv {cons("SXConsEnv10")}
 lexical syntax
   "C" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusMVEnv    
   "C" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusGndMVEnv  lexical restrictions
@@ -86,6 +86,6 @@ lexical syntax
                                                            SimplyTypedLambdaCalculusMVEnv
                                                            -/- [a-zA-Z0-9]
 context-free syntax
-  SimplyTypedLambdaCalculusMetaVarEnv -> SimplyTypedLambdaCalculusEnv {prefer, cons("SimplyTypedLambdaCalculusMetaVarEnv")}
+  SXMetaVarEnv -> SimplyTypedLambdaCalculusEnv {prefer, cons("SXMetaVarEnv")}
 lexical syntax
-  SimplyTypedLambdaCalculusMVEnv -> SimplyTypedLambdaCalculusMetaVarEnv 
+  SimplyTypedLambdaCalculusMVEnv -> SXMetaVarEnv 

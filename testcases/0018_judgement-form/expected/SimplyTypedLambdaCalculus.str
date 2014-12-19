@@ -5,15 +5,15 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
-    SimplyTypedLambdaCalculusJudgement2 : SimplyTypedLambdaCalculusX() * SimplyTypedLambdaCalculusY() * SimplyTypedLambdaCalculusZ() -> SXJudgement()
+    SXJudgement2 : SimplyTypedLambdaCalculusX() * SimplyTypedLambdaCalculusY() * SimplyTypedLambdaCalculusZ() -> SXJudgement()
 
 
 signature
   constructors
-    SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
-    SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
-    SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusX() -> SimplyTypedLambdaCalculusY()
-    SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusGndX() -> SimplyTypedLambdaCalculusGndY()
+    SXConsX0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
+    SXConsX0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
+    SXConsY1 : SimplyTypedLambdaCalculusX() -> SimplyTypedLambdaCalculusY()
+    SXConsY1 : SimplyTypedLambdaCalculusGndX() -> SimplyTypedLambdaCalculusGndY()
 
 
 strategies
@@ -23,9 +23,9 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-arities =
-    ![( "YCons1"
+    ![( "SXConsY1"
       , SXAbsArity(["X"], "Y")
-      )|[ ( "XCons0"
+      )|[ ( "SXConsX0"
           , SXAbsArity(["Y"], "X")
           )
         ]]
@@ -33,7 +33,7 @@ strategies
 
 strategies
   SimplyTypedLambdaCalculus-forms =
-    ![ ( "Judgement2"
+    ![ ( "SXJudgement2"
        , SXAbsJudgementForm(
            ["X"|["Y"|["Z"]]]
          )
