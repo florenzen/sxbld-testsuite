@@ -6,7 +6,9 @@ module SimplyTypedLambdaCalculus
 signature
   constructors
     SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusX()
+    SimplyTypedLambdaCalculusXCons0 : SimplyTypedLambdaCalculusGndX()
     SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusY()
+    SimplyTypedLambdaCalculusYCons1 : SimplyTypedLambdaCalculusGndY()
 
 
 strategies
