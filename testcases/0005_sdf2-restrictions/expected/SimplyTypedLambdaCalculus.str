@@ -4,17 +4,7 @@ module SimplyTypedLambdaCalculus
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
+  SimplyTypedLambdaCalculus-cons-names =
     ![]
 
 
