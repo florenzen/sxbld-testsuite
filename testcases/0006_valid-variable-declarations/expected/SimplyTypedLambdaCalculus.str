@@ -5,32 +5,15 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
-    SXConsX0 : SimplyTypedLambdaCalculusX()
-    SXConsX0 : SimplyTypedLambdaCalculusGndX()
-    SXConsY1 : SimplyTypedLambdaCalculusY()
-    SXConsY1 : SimplyTypedLambdaCalculusGndY()
-
-
-signature
-  constructors
-    SXMetaVarX : SXMetaVarX() -> SimplyTypedLambdaCalculusX()
-    SXMetaVarY : SXMetaVarY() -> SimplyTypedLambdaCalculusY()
+    SXCons0 : SimplyTypedLambdaCalculusX()
+    SXCons0 : SimplyTypedLambdaCalculusGndX()
+    SXCons1 : SimplyTypedLambdaCalculusY()
+    SXCons1 : SimplyTypedLambdaCalculusGndY()
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![("Y", SXAbsSortContextFree())|[("X", SXAbsSortContextFree())]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![("SXConsY1", SXAbsArity([], "Y"))|[ ("SXConsX0", SXAbsArity([], "X"))
-                                        ]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
-    ![]
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SXCons1"|["SXCons0"]]
 
 
 strategies

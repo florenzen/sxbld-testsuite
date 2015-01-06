@@ -3,13 +3,10 @@ module SimplyTypedLambdaCalculus
 exports 
   (/)
 context-free syntax
-  "foo" -> SimplyTypedLambdaCalculusX    {cons("SXConsX0")}
-  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SXConsX0")}
-  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXConsY1")}
-  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXConsY1")}
-context-free syntax
-  SXMetaVarX -> SimplyTypedLambdaCalculusX {prefer, cons("SXMetaVarX")}
-  SXMetaVarY -> SimplyTypedLambdaCalculusY {prefer, cons("SXMetaVarY")}
-lexical syntax
-  "x" [a-zA-Z0-9]* -> SXMetaVarX 
-  "y" [a-zA-Z]*    -> SXMetaVarY 
+  "foo" -> SimplyTypedLambdaCalculusX    {cons("SXCons0")}
+  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SXCons0")}
+  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXCons1")}
+  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXCons1")}
+variables
+  "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusX 
+  "y" [a-zA-Z]*    -> SimplyTypedLambdaCalculusY 
