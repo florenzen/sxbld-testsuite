@@ -1,0 +1,7 @@
+module SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initGrammar
+exports 
+  (/)
+sorts SimplyTypedLambdaCalculusFoo
+      SimplyTypedLambdaCalculusBar[[SimplyTypedLambdaCalculusQuxx]]
+      SimplyTypedLambdaCalculusBaz

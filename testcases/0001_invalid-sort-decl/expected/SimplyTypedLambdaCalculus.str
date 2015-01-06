@@ -1,0 +1,13 @@
+module SimplyTypedLambdaCalculus
+
+ imports org/sugarj/sxbld/initTrans
+
+
+strategies
+  SimplyTypedLambdaCalculus-cons-names =
+    ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
+    ![]
