@@ -10,35 +10,15 @@ signature
 
 signature
   constructors
-    SXConsX0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
-    SXConsX0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
-    SXConsY1 : SimplyTypedLambdaCalculusX() -> SimplyTypedLambdaCalculusY()
-    SXConsY1 : SimplyTypedLambdaCalculusGndX() -> SimplyTypedLambdaCalculusGndY()
+    SXCons0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
+    SXCons0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
+    SXCons1 : SimplyTypedLambdaCalculusX() -> SimplyTypedLambdaCalculusY()
+    SXCons1 : SimplyTypedLambdaCalculusGndX() -> SimplyTypedLambdaCalculusGndY()
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![("Y", SXAbsSortContextFree())|[("X", SXAbsSortContextFree())]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![( "SXConsY1"
-      , SXAbsArity(["X"], "Y")
-      )|[ ( "SXConsX0"
-          , SXAbsArity(["Y"], "X")
-          )
-        ]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
-    ![ ( "SXJudgement2"
-       , SXAbsJudgementForm(
-           ["X"|["Y"|["Z"]]]
-         )
-       )
-     ]
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SXCons1"|["SXCons0"]]
 
 
 strategies

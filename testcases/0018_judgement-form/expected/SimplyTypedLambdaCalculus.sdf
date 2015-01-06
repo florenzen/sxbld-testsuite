@@ -6,7 +6,7 @@ exports
 context-free syntax
   SimplyTypedLambdaCalculusX "+" SimplyTypedLambdaCalculusY "=" SimplyTypedLambdaCalculusZ -> SXJudgement {cons("SXJudgement2")}
 context-free syntax
-  "foo" SimplyTypedLambdaCalculusY          -> SimplyTypedLambdaCalculusX    {cons("SXConsX0")}
-  "foo" SimplyTypedLambdaCalculusGndY       -> SimplyTypedLambdaCalculusGndX {cons("SXConsX0")}
-  "bar" SimplyTypedLambdaCalculusX "bar"    -> SimplyTypedLambdaCalculusY    {cons("SXConsY1")}
-  "bar" SimplyTypedLambdaCalculusGndX "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXConsY1")}
+  "foo" SimplyTypedLambdaCalculusY          -> SimplyTypedLambdaCalculusX    {cons("SXCons0")}
+  "foo" SimplyTypedLambdaCalculusGndY       -> SimplyTypedLambdaCalculusGndX {cons("SXCons0")}
+  "bar" SimplyTypedLambdaCalculusX "bar"    -> SimplyTypedLambdaCalculusY    {cons("SXCons1")}
+  "bar" SimplyTypedLambdaCalculusGndX "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXCons1")}
