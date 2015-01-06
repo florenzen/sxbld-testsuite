@@ -3,7 +3,7 @@ module SimplyTypedLambdaCalculus
 exports 
   (/)
 context-free syntax
-  "foo" -> SimplyTypedLambdaCalculusX    {cons("SXConsX0"), left, prefer}
-  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SXConsX0"), left, prefer}
-  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXConsY1")}
-  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXConsY1")}
+  "foo" -> SimplyTypedLambdaCalculusX    {cons("SXCons0"), left, prefer}
+  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SXCons0"), left, prefer}
+  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXCons1")}
+  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXCons1")}

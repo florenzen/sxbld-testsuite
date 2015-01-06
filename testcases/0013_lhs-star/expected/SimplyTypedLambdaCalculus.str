@@ -1,0 +1,21 @@
+module SimplyTypedLambdaCalculus
+
+ imports org/sugarj/sxbld/initTrans
+
+
+signature
+  constructors
+    SimplyTypedLambdaCalculusFOO : SimplyTypedLambdaCalculusY() * iter-star() -> SimplyTypedLambdaCalculusX()
+    SimplyTypedLambdaCalculusFOO : SimplyTypedLambdaCalculusGndY() * iter-star() -> SimplyTypedLambdaCalculusGndX()
+    SXCons0                      : SimplyTypedLambdaCalculusY()
+    SXCons0                      : SimplyTypedLambdaCalculusGndY()
+
+
+strategies
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SXCons0"]
+
+
+strategies
+  SimplyTypedLambdaCalculus-inference-rules =
+    ![]
