@@ -5,8 +5,8 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
-    SXConsX0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
-    SXConsX0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
+    SXCons0 : SimplyTypedLambdaCalculusY() -> SimplyTypedLambdaCalculusX()
+    SXCons0 : SimplyTypedLambdaCalculusGndY() -> SimplyTypedLambdaCalculusGndX()
 
 
 signature
@@ -16,23 +16,8 @@ signature
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![("Y", SXAbsSortContextFree())|[("X", SXAbsSortContextFree())]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![( "SXConsX0"
-      , SXAbsArity(["Y"], "X")
-      )|[ ( "SimplyTypedLambdaCalculusFOO"
-          , SXAbsArity(["Y"], "X")
-          )
-        ]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
-    ![]
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SXCons0"|["SimplyTypedLambdaCalculusFOO"]]
 
 
 strategies
