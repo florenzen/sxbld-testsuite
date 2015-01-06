@@ -10,21 +10,8 @@ signature
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![("Y", SXAbsSortContextFree())|[("X", SXAbsSortContextFree())]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![ ( "SimplyTypedLambdaCalculusFOO"
-       , SXAbsArity(["Y"], "X")
-       )
-     ]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
-    ![]
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SimplyTypedLambdaCalculusFOO"]
 
 
 strategies
