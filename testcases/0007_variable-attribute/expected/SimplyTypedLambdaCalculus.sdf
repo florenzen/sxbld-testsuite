@@ -1,0 +1,12 @@
+module SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initGrammar
+exports 
+  (/)
+context-free syntax
+  "foo" -> SimplyTypedLambdaCalculusX    {cons("SXCons0")}
+  "foo" -> SimplyTypedLambdaCalculusGndX {cons("SXCons0")}
+  "bar" -> SimplyTypedLambdaCalculusY    {cons("SXCons1")}
+  "bar" -> SimplyTypedLambdaCalculusGndY {cons("SXCons1")}
+variables
+  "x" [a-zA-Z0-9]* -> SimplyTypedLambdaCalculusX {cons("metavar-x")}
+  "y" [a-zA-Z]*    -> SimplyTypedLambdaCalculusY {prefer}

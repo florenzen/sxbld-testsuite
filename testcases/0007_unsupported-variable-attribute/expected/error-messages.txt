@@ -1,2 +1,0 @@
-error: line 8 column 24 to line 8 column 42:
-  "Attributes not supported in variables section"
