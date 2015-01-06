@@ -7,24 +7,13 @@ signature
   constructors
     SimplyTypedLambdaCalculusFoo : SimplyTypedLambdaCalculusX()
     SimplyTypedLambdaCalculusFoo : SimplyTypedLambdaCalculusGndX()
-    SXConsY0                     : SimplyTypedLambdaCalculusY()
-    SXConsY0                     : SimplyTypedLambdaCalculusGndY()
+    SXCons0                      : SimplyTypedLambdaCalculusY()
+    SXCons0                      : SimplyTypedLambdaCalculusGndY()
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![("Y", SXAbsSortContextFree())|[("X", SXAbsSortContextFree())]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![("SXConsY0", SXAbsArity([], "Y"))|[ ("SimplyTypedLambdaCalculusFoo", SXAbsArity([], "X"))
-                                        ]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
-    ![]
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SXCons0"]
 
 
 strategies
