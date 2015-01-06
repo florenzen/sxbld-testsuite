@@ -5,63 +5,45 @@ module SimplyTypedLambdaCalculus
 
 signature
   constructors
-    SXMetaVarNum : SXMetaVarNum() -> SimplyTypedLambdaCalculusNum()
-
-
-signature
-  constructors
     SXJudgement2 : SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() * SimplyTypedLambdaCalculusNum() -> SXJudgement()
 
 
 signature
   constructors
-    SXConsNum0 : SimplyTypedLambdaCalculusNum()
-    SXConsNum0 : SimplyTypedLambdaCalculusGndNum()
-    SXConsNum1 : SimplyTypedLambdaCalculusNum() -> SimplyTypedLambdaCalculusNum()
-    SXConsNum1 : SimplyTypedLambdaCalculusGndNum() -> SimplyTypedLambdaCalculusGndNum()
+    SXCons0 : SimplyTypedLambdaCalculusNum()
+    SXCons0 : SimplyTypedLambdaCalculusGndNum()
+    SXCons1 : SimplyTypedLambdaCalculusNum() -> SimplyTypedLambdaCalculusNum()
+    SXCons1 : SimplyTypedLambdaCalculusGndNum() -> SimplyTypedLambdaCalculusGndNum()
 
 
 strategies
-  SimplyTypedLambdaCalculus-sorts =
-    ![("Num", SXAbsSortContextFree())]
-
-
-strategies
-  SimplyTypedLambdaCalculus-arities =
-    ![( "SXConsNum1"
-      , SXAbsArity(["Num"], "Num")
-      )|[ ("SXConsNum0", SXAbsArity([], "Num"))
-        ]]
-
-
-strategies
-  SimplyTypedLambdaCalculus-forms =
-    ![ ( "SXJudgement2"
-       , SXAbsJudgementForm(
-           ["Num"|["Num"|["Num"]]]
-         )
-       )
-     ]
+  SimplyTypedLambdaCalculus-cons-names =
+    !["SXCons1"|["SXCons0"]]
 
 
 strategies
   SimplyTypedLambdaCalculus-inference-rules =
     ![( "Succ"
       , SXAbsInfRule(
-          []
+          [ SXJudgement2(
+              SXMetaVar("n1")
+            , SXMetaVar("n2")
+            , SXMetaVar("n3")
+            )
+          ]
         , SXJudgement2(
-            SXConsNum1(SXMetaVarNum("n1"))
-          , SXMetaVarNum("n2")
-          , SXConsNum1(SXMetaVarNum("n3"))
+            SXCons1(SXMetaVar("n1"))
+          , SXMetaVar("n2")
+          , SXCons1(SXMetaVar("n3"))
           )
         )
       )|[ ( "Zero"
           , SXAbsInfRule(
               []
             , SXJudgement2(
-                SXConsNum0()
-              , SXMetaVarNum("n")
-              , SXMetaVarNum("n")
+                SXCons0()
+              , SXMetaVar("n")
+              , SXMetaVar("n")
               )
             )
           )

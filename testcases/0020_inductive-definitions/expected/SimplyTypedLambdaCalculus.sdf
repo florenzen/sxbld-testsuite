@@ -2,14 +2,12 @@ module SimplyTypedLambdaCalculus
  imports org/sugarj/sxbld/initGrammar SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
 exports 
   (/)
-context-free syntax
-  SXMetaVarNum -> SimplyTypedLambdaCalculusNum {prefer, cons("SXMetaVarNum")}
-lexical syntax
-  "n" [0-9]* -> SXMetaVarNum 
+variables
+  "n" [0-9]* -> SimplyTypedLambdaCalculusNum 
 context-free syntax
   SimplyTypedLambdaCalculusNum "+" SimplyTypedLambdaCalculusNum "=" SimplyTypedLambdaCalculusNum -> SXJudgement {cons("SXJudgement2")}
 context-free syntax
-  "0"                                            -> SimplyTypedLambdaCalculusNum    {cons("SXConsNum0")}
-  "0"                                            -> SimplyTypedLambdaCalculusGndNum {cons("SXConsNum0")}
-  "succ" "(" SimplyTypedLambdaCalculusNum ")"    -> SimplyTypedLambdaCalculusNum    {cons("SXConsNum1")}
-  "succ" "(" SimplyTypedLambdaCalculusGndNum ")" -> SimplyTypedLambdaCalculusGndNum {cons("SXConsNum1")}
+  "0"                                            -> SimplyTypedLambdaCalculusNum    {cons("SXCons0")}
+  "0"                                            -> SimplyTypedLambdaCalculusGndNum {cons("SXCons0")}
+  "succ" "(" SimplyTypedLambdaCalculusNum ")"    -> SimplyTypedLambdaCalculusNum    {cons("SXCons1")}
+  "succ" "(" SimplyTypedLambdaCalculusGndNum ")" -> SimplyTypedLambdaCalculusGndNum {cons("SXCons1")}

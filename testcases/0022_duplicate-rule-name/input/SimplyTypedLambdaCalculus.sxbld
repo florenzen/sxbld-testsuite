@@ -21,12 +21,12 @@ context-free syntax
   Term Term                 -> Term {left}
   NAT                       -> Term
   Term "+" Term             -> Term {left}
-  "(" Term ")"              -> Term {brackets}
+  "(" Term ")"              -> Term {bracket}
 
 context-free syntax  
   "Nat"          -> Type
   Type "->" Type -> Type {right}
-  "(" Type ")"   -> Type {brackets} 
+  "(" Type ")"   -> Type {bracket}
 
 lexical syntax
   "x" [a-zA-Z0-9]* -> MVID
@@ -40,10 +40,10 @@ lexical restrictions
   MVID MVNAT MVTerm MVType -/- [a-zA-Z0-9]
 
 variables
-  MVID   -> ID
-  MVNAT  -> NAT
-  MVTerm -> Term
-  MVType -> Type
+  MVID   -> ID   {prefer}
+  MVNAT  -> NAT  {prefer}
+  MVTerm -> Term {prefer}
+  MVType -> Type {prefer}
 
 context-free syntax
   "{}"                -> Env 
