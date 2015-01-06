@@ -1,0 +1,11 @@
+module SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initGrammar
+exports 
+  (/)
+lexical syntax
+  "x" -> SimplyTypedLambdaCalculusX    
+  "x" -> SimplyTypedLambdaCalculusGndX  context-free syntax
+                                          
+context-free syntax
+  "x" -> SimplyTypedLambdaCalculusX    {cons("SXCons0")}
+  "x" -> SimplyTypedLambdaCalculusGndX {cons("SXCons0")}

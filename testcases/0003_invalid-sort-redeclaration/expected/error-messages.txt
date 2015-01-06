@@ -1,2 +1,0 @@
-error: line 7 column 9 to line 7 column 9:
-  "Invalid redeclaration of sort"
