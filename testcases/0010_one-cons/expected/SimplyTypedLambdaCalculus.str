@@ -13,7 +13,7 @@ signature
 
 strategies
   SimplyTypedLambdaCalculus-cons-names =
-    !["SXCons0"]
+    !["SXCons0"|["SimplyTypedLambdaCalculusFoo"]]
 
 
 strategies
