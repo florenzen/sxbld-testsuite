@@ -1,0 +1,5 @@
+base language definition Test
+
+lexical syntax
+  [0-9][0-9]*          -> NAT
+  [a-zA-Z][a-zA-Z0-9]* -> ID {sx-requires-inequality}

@@ -1,0 +1,11 @@
+module Test
+ imports org/sugarj/sxbld/initGrammar
+exports 
+  (/)
+lexical syntax
+  [0-9] [0-9]*          -> TestNAT    
+  [0-9] [0-9]*          -> TestGndNAT 
+  [a-zA-Z] [a-zA-Z0-9]* -> TestID     {sx-requires-inequality}
+  [a-zA-Z] [a-zA-Z0-9]* -> TestGndID  {sx-requires-inequality}
+context-free syntax
+  TestID "=/=" TestID -> SXJudgement {cons("SXNeq")}

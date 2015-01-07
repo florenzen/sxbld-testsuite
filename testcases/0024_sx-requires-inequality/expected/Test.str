@@ -1,0 +1,18 @@
+module Test
+
+ imports org/sugarj/sxbld/initTrans
+
+
+signature
+  constructors
+    SXNeq : TestID() * TestID() -> SXJudgement()
+
+
+strategies
+  Test-cons-names =
+    ![]
+
+
+strategies
+  Test-inference-rules =
+    ![]
