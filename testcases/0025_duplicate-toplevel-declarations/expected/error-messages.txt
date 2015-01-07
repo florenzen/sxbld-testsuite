@@ -1,0 +1,2 @@
+error: line 4 column 0 to line 4 column 22:
+  "Only one `toplevel declarations' allowed"

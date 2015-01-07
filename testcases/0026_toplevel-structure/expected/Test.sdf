@@ -1,0 +1,15 @@
+module Test
+ imports org/sugarj/sxbld/initGrammar Test Test Test Test Test
+exports 
+  (/)
+variables
+  "sig"  -> TestSig          {prefer}
+  "tlds" -> TestToplevelDecs {prefer}
+context-free syntax
+  TestToplevelDecs "=>" TestSig -> SXJudgement {cons("SXJudgement0")}
+context-free syntax
+  TestToplevelDec TestToplevelDecs -> TestToplevelDecs {cons("SXToplevelDeclarationsCons")}
+                                   -> TestToplevelDecs {cons("SXToplevelDeclarationsNil")}
+context-free syntax
+  TestSig          -> SXBldIntfJudgInterface 
+  TestToplevelDecs -> SXBldIntfJudgToplevel  

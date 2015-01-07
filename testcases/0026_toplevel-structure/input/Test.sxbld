@@ -1,0 +1,15 @@
+base language definition Test
+
+toplevel declarations ToplevelDecs
+toplevel declaration ToplevelDec
+
+interface Sig
+
+judgement forms
+  { ToplevelDecs "=>" Sig }
+
+variables
+  "sig"  -> Sig          {prefer}
+  "tlds" -> ToplevelDecs {prefer}
+
+interface for tlds is sig derived by tlds => sig
