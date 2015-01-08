@@ -1,0 +1,59 @@
+module Test
+
+ imports org/sugarj/sxbld/initTrans Test Test Test Test Test
+
+
+signature
+  constructors
+    
+
+
+signature
+  constructors
+    SXJudgement0 : TestEnv() * TestTerm() * TestType() -> SXJudgement()
+
+
+signature
+  constructors
+    SXNeq : TestID() * TestID() -> SXJudgement()
+
+
+signature
+  constructors
+    SXToplevelDeclarationsCons : TestToplevelDec() * TestToplevelDecs() -> TestToplevelDecs()
+    SXToplevelDeclarationsNil  : TestToplevelDecs()
+
+
+signature
+  constructors
+    
+
+
+signature
+  constructors
+    SXGetInterface : TestEnv() * TestMID() -> SXJudgement()
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-cons-names =
+    ![]
+
+
+strategies
+  Test-inference-rules =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-body-decs =
+    ![]

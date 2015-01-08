@@ -1,0 +1,28 @@
+module Test
+ imports org/sugarj/sxbld/initGrammar Test Test Test Test Test
+exports 
+  (/)
+lexical syntax
+  [a-zA-Z] [a-zA-Z0-9]* -> TestMID    {sx-namespace-flat}
+  [a-zA-Z] [a-zA-Z0-9]* -> TestGndMID {sx-namespace-flat} context-free syntax
+                                                            
+context-free syntax
+  TestEnv "|-" TestTerm ":" TestType -> SXJudgement {cons("SXJudgement0")}
+lexical syntax
+  [0-9] [0-9]*          -> TestNAT    
+  [0-9] [0-9]*          -> TestGndNAT 
+  [a-zA-Z] [a-zA-Z0-9]* -> TestID     {sx-requires-inequality}
+  [a-zA-Z] [a-zA-Z0-9]* -> TestGndID  {sx-requires-inequality}
+context-free syntax
+  TestID "=/=" TestID -> SXJudgement {cons("SXNeq")}
+context-free syntax
+  TestToplevelDec TestToplevelDecs -> TestToplevelDecs {cons("SXToplevelDeclarationsCons")}
+                                   -> TestToplevelDecs {cons("SXToplevelDeclarationsNil")}
+context-free syntax
+  TestEnv          -> SXBldIntfJudgInterface 
+  TestToplevelDecs -> SXBldIntfJudgToplevel  
+context-free syntax
+  TestEnv "=" "interface" "(" TestMID ")" -> SXJudgement {cons("SXGetInterface")}
+context-free syntax
+  TestToplevelDec -> ToplevelDeclaration  context-free syntax
+                                            
