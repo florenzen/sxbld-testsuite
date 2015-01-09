@@ -47,3 +47,13 @@ signature
 strategies
   Test-namespace-dec =
     !("SXCons0", 2)
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-import-decs =
+    ![]

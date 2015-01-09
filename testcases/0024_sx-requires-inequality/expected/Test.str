@@ -16,3 +16,13 @@ strategies
 strategies
   Test-inference-rules =
     ![]
+
+
+strategies
+  Test-body-decs =
+    ![]
+
+
+strategies
+  Test-import-decs =
+    ![]

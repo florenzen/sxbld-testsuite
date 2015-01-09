@@ -23,3 +23,13 @@ strategies
 strategies
   SimplyTypedLambdaCalculus-inference-rules =
     ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-body-decs =
+    ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-import-decs =
+    ![]

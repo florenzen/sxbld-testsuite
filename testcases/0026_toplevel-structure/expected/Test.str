@@ -19,6 +19,11 @@ signature
     
 
 
+signature
+  constructors
+    
+
+
 strategies
   Test-interface-judgement =
     !( SXMetaVar("tlds")
@@ -37,4 +42,24 @@ strategies
 
 strategies
   Test-inference-rules =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-body-decs =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-import-decs =
     ![]

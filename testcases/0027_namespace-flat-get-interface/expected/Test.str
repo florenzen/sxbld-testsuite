@@ -34,6 +34,11 @@ signature
     SXGetInterface : TestEnv() * TestMID() -> SXJudgement()
 
 
+signature
+  constructors
+    
+
+
 strategies
   Test-cons-names =
     ![]
@@ -41,4 +46,24 @@ strategies
 
 strategies
   Test-inference-rules =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-body-decs =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-import-decs =
     ![]

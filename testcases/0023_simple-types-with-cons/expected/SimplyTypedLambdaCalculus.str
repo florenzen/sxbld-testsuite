@@ -142,3 +142,13 @@ strategies
                   )
                 )
               ]]]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-body-decs =
+    ![]
+
+
+strategies
+  SimplyTypedLambdaCalculus-import-decs =
+    ![]

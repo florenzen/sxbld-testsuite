@@ -13,3 +13,7 @@ context-free syntax
 context-free syntax
   TestSig          -> SXBldIntfJudgInterface 
   TestToplevelDecs -> SXBldIntfJudgToplevel  
+context-free syntax
+  TestToplevelDec -> ToplevelDeclaration  context-free syntax
+                                             context-free syntax
+                                               
