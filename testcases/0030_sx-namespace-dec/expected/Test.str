@@ -1,0 +1,49 @@
+module Test
+
+ imports org/sugarj/sxbld/initTrans Test Test
+
+
+signature
+  constructors
+    SXCons0 : TestMID() -> TestImport()
+    SXCons0 : TestGndMID() -> TestGndImport()
+
+
+signature
+  constructors
+    
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-cons-names =
+    !["SXCons0"]
+
+
+strategies
+  Test-inference-rules =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-body-decs =
+    ![]
+
+
+signature
+  constructors
+    
+
+
+strategies
+  Test-namespace-dec =
+    !("SXCons0", 2)

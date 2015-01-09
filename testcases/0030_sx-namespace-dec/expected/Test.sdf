@@ -1,0 +1,16 @@
+module Test
+ imports org/sugarj/sxbld/initGrammar Test Test
+exports 
+  (/)
+
+context-free syntax
+  "import" mid:TestMID    -> TestImport    {cons("SXCons0"), sx-namespace-dec(mid)}
+  "import" mid:TestGndMID -> TestGndImport {cons("SXCons0"), sx-namespace-dec(mid)}
+lexical syntax
+  [a-zA-Z] [a-zA-Z0-9]* -> TestMID    
+  [a-zA-Z] [a-zA-Z0-9]* -> TestGndMID  context-free syntax
+                                         
+context-free syntax
+  TestToplevelDec -> ToplevelDeclaration  context-free syntax
+                                             context-free syntax
+                                               TestGndImport -> TestToplevelDec 
