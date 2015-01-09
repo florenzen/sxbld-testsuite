@@ -1,0 +1,10 @@
+base language definition Test
+
+lexical syntax
+  [a-zA-Z][a-zA-Z0-9]* -> MID
+
+toplevel declaration ToplevelDec
+
+context-free syntax
+  "import" mid:MID                   -> Import {sx-import-dec(mid)}
+  "import" mid:MID "only" "onlylist" -> Import {sx-import-dec(mid)}
