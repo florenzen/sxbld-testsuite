@@ -1,0 +1,11 @@
+base language definition Test
+
+lexical syntax
+  [a-zA-Z][a-zA-Z0-9]* -> MID
+
+toplevel declaration ToplevelDec
+
+context-free syntax
+  "module" mid:MID -> Header {sx-namespace-dec(mid)}
+
+  "namespace" mid:MID -> Namespace {sx-namespace-dec(mid)}

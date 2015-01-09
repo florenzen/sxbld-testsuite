@@ -1,0 +1,2 @@
+error: line 9 column 46 to line 9 column 46:
+  "Label of `sx-namespace-dec' must be attached to symbol on lhs"

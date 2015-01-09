@@ -1,0 +1,2 @@
+error: line 11 column 36 to line 11 column 56:
+  "Only one `sx-namespace-dec' allowed"
