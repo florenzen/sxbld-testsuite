@@ -9,9 +9,7 @@ context-free syntax
 lexical syntax
   [a-zA-Z] [a-zA-Z0-9]* -> TestMID    
   [a-zA-Z] [a-zA-Z0-9]* -> TestGndMID  context-free syntax
-                                         
-context-free syntax
-  TestToplevelDec -> ToplevelDeclaration  context-free syntax
+                                          context-free syntax
                                              context-free syntax
                                                TestGndImport -> TestToplevelDec 
 context-free syntax

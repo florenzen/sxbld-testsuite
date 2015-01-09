@@ -1,2 +1,2 @@
-error: line 11 column 31 to line 11 column 31:
+error: line 12 column 32 to line 12 column 32:
   "Only one `sx-namespace' attribute allowed"

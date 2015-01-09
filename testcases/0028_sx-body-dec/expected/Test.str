@@ -34,9 +34,9 @@ signature
     SXGetInterface : TestEnv() * TestMID() -> SXJudgement()
 
 
-signature
-  constructors
-    
+strategies
+  Test-ToplevelDeclaration =
+    !"ToplevelDec"
 
 
 strategies

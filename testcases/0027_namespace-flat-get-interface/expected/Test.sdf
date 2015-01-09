@@ -24,6 +24,5 @@ context-free syntax
 context-free syntax
   TestEnv "=" "interface" "(" TestMID ")" -> SXJudgement {cons("SXGetInterface")}
 context-free syntax
-  TestToplevelDec -> ToplevelDeclaration  context-free syntax
-                                             context-free syntax
-                                               
+   context-free syntax
+     

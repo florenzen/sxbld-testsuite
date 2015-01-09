@@ -16,9 +16,9 @@ signature
     
 
 
-signature
-  constructors
-    
+strategies
+  Test-ToplevelDeclaration =
+    !"ToplevelDec"
 
 
 strategies
