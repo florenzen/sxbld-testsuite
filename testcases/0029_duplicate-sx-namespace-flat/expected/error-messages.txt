@@ -1,0 +1,2 @@
+error: line 11 column 31 to line 11 column 31:
+  "Only one `sx-namespace' attribute allowed"
