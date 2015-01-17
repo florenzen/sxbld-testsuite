@@ -4,6 +4,8 @@ exports
   (/)
 lexical restrictions
   SimplyTypedLambdaCalculusID -/- [A-Za-z0-9]
-  SimplyTypedLambdaCalculusNAT -/- [0-9] context-free restrictions
-                                           SimplyTypedLambdaCalculusDef
-                                           -/- [d] . [e] . [f]
+  SimplyTypedLambdaCalculusNAT -/- [0-9]
+  SimplyTypedLambdaCalculusGndID -/- [A-Za-z0-9]
+  SimplyTypedLambdaCalculusGndNAT -/- [0-9] context-free restrictions
+                                              SimplyTypedLambdaCalculusDef
+                                              -/- [d] . [e] . [f]

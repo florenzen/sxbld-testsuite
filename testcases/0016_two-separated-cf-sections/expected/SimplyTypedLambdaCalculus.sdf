@@ -1,5 +1,5 @@
 module SimplyTypedLambdaCalculus
- imports org/sugarj/sxbld/initGrammar SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initGrammar SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
 exports 
   (/)
 

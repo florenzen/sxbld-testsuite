@@ -46,7 +46,7 @@ signature
 
 strategies
   Test-namespace-dec =
-    !("SXCons0", 2)
+    !("SXCons0", 0)
 
 
 signature

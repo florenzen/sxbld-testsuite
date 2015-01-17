@@ -1,6 +1,6 @@
 module SimplyTypedLambdaCalculus
 
- imports org/sugarj/sxbld/initTrans SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initTrans SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
 
 
 signature
@@ -140,6 +140,16 @@ strategies
                   )
                 )
               ]]]]
+
+
+strategies
+  SimplyTypedLambdaCalculus-base-file-ext =
+    !"st"
+
+
+strategies
+  SimplyTypedLambdaCalculus-extensible-file-ext =
+    !"xst"
 
 
 strategies

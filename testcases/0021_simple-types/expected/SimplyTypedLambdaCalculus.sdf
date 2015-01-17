@@ -1,5 +1,5 @@
 module SimplyTypedLambdaCalculus
- imports org/sugarj/sxbld/initGrammar SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
+ imports org/sugarj/sxbld/initGrammar SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus SimplyTypedLambdaCalculus
 exports 
   (/)
 
@@ -18,6 +18,14 @@ lexical syntax
                                                                  
                                                                  
                                                                  SimplyTypedLambdaCalculusID
+                                                                 -/- [a-zA-Z0-9]
+                                                                 
+                                                                 
+                                                                 SimplyTypedLambdaCalculusGndNAT
+                                                                 -/- [0-9]
+                                                                 
+                                                                 
+                                                                 SimplyTypedLambdaCalculusGndID
                                                                  -/- [a-zA-Z0-9]
 lexical syntax
   "Nat"                                     -> SimplyTypedLambdaCalculusPrimitiveType    
@@ -67,6 +75,13 @@ lexical syntax
                                                                SimplyTypedLambdaCalculusMVTerm
                                                                SimplyTypedLambdaCalculusMVType
                                                                -/- [a-zA-Z0-9]
+                                                               
+                                                               
+                                                               SimplyTypedLambdaCalculusGndMVID
+                                                               SimplyTypedLambdaCalculusGndMVNAT
+                                                               SimplyTypedLambdaCalculusGndMVTerm
+                                                               SimplyTypedLambdaCalculusGndMVType
+                                                               -/- [a-zA-Z0-9]
 variables
   SimplyTypedLambdaCalculusMVID   -> SimplyTypedLambdaCalculusID   {prefer}
   SimplyTypedLambdaCalculusMVNAT  -> SimplyTypedLambdaCalculusNAT  {prefer}
@@ -84,6 +99,10 @@ lexical syntax
                                                               
                                                               
                                                               SimplyTypedLambdaCalculusMVEnv
+                                                              -/- [a-zA-Z0-9]
+                                                              
+                                                              
+                                                              SimplyTypedLambdaCalculusGndMVEnv
                                                               -/- [a-zA-Z0-9]
 variables
   SimplyTypedLambdaCalculusMVEnv -> SimplyTypedLambdaCalculusEnv 
