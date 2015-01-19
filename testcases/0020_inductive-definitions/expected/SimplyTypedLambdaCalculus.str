@@ -24,7 +24,7 @@ strategies
 strategies
   SimplyTypedLambdaCalculus-inference-rules =
     ![( "Succ"
-      , SXAbsInfRule(
+      , SXInfRule(
           [ SXJudgement2(
               SXMetaVar("n1")
             , SXMetaVar("n2")
@@ -38,7 +38,7 @@ strategies
           )
         )
       )|[ ( "Zero"
-          , SXAbsInfRule(
+          , SXInfRule(
               []
             , SXJudgement2(
                 SXCons0()

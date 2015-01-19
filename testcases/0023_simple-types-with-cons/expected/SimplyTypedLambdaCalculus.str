@@ -70,7 +70,7 @@ strategies
 strategies
   SimplyTypedLambdaCalculus-inference-rules =
     ![( "Abs"
-      , SXAbsInfRule(
+      , SXInfRule(
           [SXJudgement6(
              SXMetaVar("C")
            , SXMetaVar("t1")
@@ -94,7 +94,7 @@ strategies
           )
         )
       )|[( "App"
-         , SXAbsInfRule(
+         , SXInfRule(
              [ SXJudgement6(
                  SXCons5(
                    SXMetaVar("C")
@@ -119,7 +119,7 @@ strategies
              )
            )
          )|[( "Nat"
-            , SXAbsInfRule(
+            , SXInfRule(
                 []
               , SXJudgement6(
                   SXMetaVar("C")
@@ -128,7 +128,7 @@ strategies
                 )
               )
             )|[ ( "Var"
-                , SXAbsInfRule(
+                , SXInfRule(
                     []
                   , SXJudgement6(
                       SXCons5(
